@@ -55,6 +55,8 @@ testResults.push(5.91);
 console.log(testResults, storedResults);
 console.log(testResults.indexOf(1));
 
+console.log(testResults.includes(10.999));
+
 const personData = [{ name: 'Jeff' }, { name: 'Manuel' }];
 console.log(personData.indexOf({ name: 'Jeff' }));
 
@@ -65,3 +67,9 @@ const jeff = personData.find((person, inx, persons) => {
 jeff.name = 'Douglas';
 
 console.log(jeff, personData);
+
+const douglasIndex = personData.findIndex((person, idx, persons) => {
+  return person.name === 'Douglas';
+});
+
+console.log(douglasIndex);
